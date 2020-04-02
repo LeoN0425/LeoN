@@ -26,3 +26,9 @@ for i in words:
         numstat[s]+=1#将每个单词不重复地放入列表中，并统计出现次数
 nummax=[]
 wordmax=[]
+for i in range(6):
+    v=numstat.index(max(numstat))
+    nummax.append(numstat[v])
+    wordmax.append(stat[v])
+    numstat.remove(numstat[v])
+    stat.remove(stat[v])#获取列表排名前六的单词与词频数
