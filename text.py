@@ -32,3 +32,17 @@ for i in range(6):
     wordmax.append(stat[v])
     numstat.remove(numstat[v])
     stat.remove(stat[v])#获取列表排名前六的单词与词频数
+
+plt.bar(wordmax,nummax)
+plt.title('keyword STAT')
+plt.show()#用图标显示出来
+
+arti=open(r'C:\English Test.txt')
+c=arti.read()
+main=tk.Tk()#创建tkinter主界面
+main.geometry('1800x960')
+main.title('Python文本显示')
+article=tk.Message(main,text=c,width=1400)#将文本在主界面显示出来
+article.config(bg='lightgreen', font=('times',14,'italic'))#设置文本参数
+
+article.pack()
